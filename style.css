@@ -20,7 +20,7 @@
     padding: 0;
     background-color: #f8f8f8;
     font-family: 'PT Sans',Arial,sans-serif;
-    font-size: 18px;
+    font-size: 12px;
     color: #000;
     margin: 0;
 }
@@ -216,7 +216,7 @@
     cursor: pointer;
     margin-top: 11px;
     font-family: 'PT Sans', serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
 }
 h3 {
@@ -227,14 +227,29 @@ h3 {
     outline: none;
 }
 .container {
-    display: none;
     width: 100%;
-    max-width: 830px;
+    max-width: 1000px;
     margin: auto;
     margin-bottom: 50px;
+    font-size: 0;
+}
+.container-1 {
+    width: 50%;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+}
+.container-2 {
+    width: 50%;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
 }
 .container p {
-    font-size: 20px;
+    font-size: 16px;
+    text-indent: 30px;
+    margin: 5px;
+    text-align: justify;
 }
 .main-menu-jpg-mobile {
     display: none;
@@ -242,24 +257,29 @@ h3 {
 img.main-menu-jpg {
     width: 100%;
 }
-th {
-    background-color: #8AD0FF;
-    padding: 20px;
-}
-td {
-    padding: 20px;
-    background-color: #fff;
-}
-.container.active {
-    display: block;
-}
-.button-1.active {
-    color: #c2d0e1;
-}
-.button-2.active {
-    color: #c2d0e1;
-}
-
+#chartdiv {
+    width: 100%;
+    height: 400px;
+  }
+  #chartdiv1 {
+    width: 100%;
+    height: 400px;
+  }
+  .amcharts-chart-div > a {
+    display: none !important;
+  }
+  .amcharts-export-menu {
+    display: none !important;
+  }
+  .amChartsLegend {
+    overflow: hidden; 
+    position: relative; 
+    text-align: left; 
+    width: 100% !important; 
+    height: 94px; 
+    left: 10px !important; 
+    top: 5px !important;
+  }
 
 /* Футер */
 .footer {
@@ -504,7 +524,7 @@ td {
 }
 /* Мэйн моб */
 .container {
-    padding: 0 20px;
+    padding: 0 10px;
 }
 .main-menu-jpg {
     display: none;
@@ -519,12 +539,15 @@ h1 {
     font-size: 40px;
     text-align: center;
 }
-th {
-    padding: 10px;
+.container-1, .container-2 {
+    display: block;
+    width: 100%
 }
-td {
-    padding: 10px;
-}
+.amChartsLegend {
+    position: relative;
+    left: -10px !important; 
+    top: 5px !important;
+  }
 
 /* Футер моб */
 .footer {
