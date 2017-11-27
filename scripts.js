@@ -1,12 +1,12 @@
 var chart = AmCharts.makeChart("chartdiv", {
     type: "serial",
     theme: "light",
+    autoMargins: false,
+   marginLeft: 60,
+    marginRight: 8,
+    marginTop: 10,
+    marginBottom: 26,
     legend: {
-    //   horizontalGap: 10,
-    //   maxColumns: 1,
-    //   position: "right",
-    //   useGraphSettings: true,
-    //   markerSize: 10
     autoMargins: false,
     equalWidths: true,
     horizontalGap: 10,
@@ -102,6 +102,7 @@ var chart = AmCharts.makeChart("chartdiv", {
         gridAlpha: 0
       }
     ],
+    startDuration: 1,
     graphs: [
       {
         balloonText:
@@ -174,104 +175,104 @@ var chart = AmCharts.makeChart("chartdiv", {
       },
     "dataProvider": [ {
       "year": 1997,
-      "income": 144,
-      "expenses": 102
+      "expenses": 144,
+      "income": 102
     }, {
       "year": 1998,
-      "income": 144,
-      "expenses": 89
+      "expenses": 144,
+      "income": 89
     }, {
       "year": 1999,
-      "income": 146,
-      "expenses": 51
+      "expenses": 146,
+      "income": 51
     }, {
       "year": 2000,
-      "income": 143,
-      "expenses": 62
+      "expenses": 143,
+      "income": 62
     }, {
       "year": 2001,
-      "income": 189,
-      "expenses": 91
+      "expenses": 189,
+      "income": 91
+     }, {
+      "year": 2002,
+      "expenses": 197,
+      "income": 183
     }, {
-        "year": 2002,
-        "income": 197,
-        "expenses": 183
-      }, {
-        "year": 2003,
-        "income": 201,
-        "expenses": 98
-      },{
-        "year": 2004,
-        "income": 199,
-        "expenses": 121
-      },{
-        "year": 2005,
-        "income": 186,
-        "expenses": 148
-      },{
-        "year": 2006,
-        "income": 213,
-        "expenses": 1583
-      },{
-        "year": 2007,
-        "income": 201,
-        "expenses": 171
-      },{
-        "year": 2008,
-        "income": 190.4,
-        "expenses": 419
-      },{
-        "year": 2009,
-        "income": 235.1,
-        "expenses": 261
-      },{
-        "year": 2010,
-        "income": 265.5,
-        "expenses": 280
-      },{
-        "year": 2011,
-        "income": 262.2,
-        "expenses": 382.6
-      },{
-        "year": 2012,
-        "income": 260.7,
-        "expenses": 284.7
-      },{
-        "year": 2013,
-        "income": 324,
-        "expenses": 302.3
-      },{
-        "year": 2014,
-        "income": 311.8,
-        "expenses": 278.9
-      },{
-        "year": 2015,
-        "income": 286.6,
-        "expenses": 472.5
-      },{
-        "year": 2016,
-        "income": 324,
-        "expenses": 428
-      } ],
+      "year": 2003,
+      "expenses": 201,
+      "income": 98
+    },{
+      "year": 2004,
+      "expenses": 199,
+      "income": 121
+    },{
+      "year": 2005,
+      "expenses": 186,
+      "income": 148
+    },{
+      "year": 2006,
+      "expenses": 213,
+      "income": 1583
+    },{
+      "year": 2007,
+      "expenses": 201,
+      "income": 171
+    },{
+      "year": 2008,
+      "expenses": 190.4,
+      "income": 419
+    },{
+      "year": 2009,
+      "expenses": 235.1,
+      "income": 261
+    },{
+      "year": 2010,
+      "expenses": 265.5,
+      "income": 280
+    },{
+      "year": 2011,
+      "expenses": 262.2,
+      "income": 382.6
+    },{
+      "year": 2012,
+      "expenses": 260.7,
+      "income": 284.7
+    },{
+      "year": 2013,
+      "expenses": 324,
+      "income": 302.3
+    },{
+      "year": 2014,
+      "expenses": 311.8,
+      "income": 278.9
+    },{
+      "year": 2015,
+      "expenses": 286.6,
+      "income": 472.5
+    },{
+      "year": 2016,
+      "expenses": 324,
+      "income": 428
+    } ],
     "valueAxes": [ {
       "stackType": "regular",
       "axisAlpha": 1,
       "gridAlpha": 0,
-      "title": "тонн."
+      "title": "тонны золота"
     } ],
     "startDuration": 1,
     "graphs": [ {
       "alphaField": "alpha",
-      "balloonText": "<span style='font-size:12px;'>[[title]] в [[category]]:<br><span style='font-size:20px;'>[[value]]</span> [[additional]]</span>",
+      "balloonText": "<b>[[title]]</b> <br> <span style='font-size:14px'>[[category]]: <b>[[value]] </b> [[additional]]</span>",
       "fillAlphas": 0.8,
       "lineAlpha": 0.3,
-      "title": "Объем добычи в тоннах",
+      "title": "Объем приращенных запасов золота (ABC1) <br> в тоннах",
       "type": "column",
       "valueField": "income",
       "dashLengthField": "dashLengthColumn"
     }, {
       "id": "graph2",
-      "balloonText": "<span style='font-size:12px;'>[[title]] в [[category]]:<br><span style='font-size:20px;'>[[value]]</span> [[additional]]</span>",
+      "balloonText": "<b>[[title]]</b> <br> <span style='font-size:14px'>[[category]]: <b>[[value]] </b> [[additional]]</span>",
       "bullet": "round",
       "lineThickness": 3,
       "bulletSize": 7,
@@ -281,7 +282,7 @@ var chart = AmCharts.makeChart("chartdiv", {
       "bulletBorderThickness": 3,
       "fillAlphas": 0,
       "lineAlpha": 1,
-      "title": "Объем приращенных запасов (ABC1) <br> в тоннах",
+      "title": "Объем добычи золота в тоннах",
       "valueField": "expenses",
       "dashLengthField": "dashLengthLine"
     } ],
