@@ -97,7 +97,7 @@ var chart = AmCharts.makeChart("chartdiv", {
   valueAxes: [
     {
       stackType: "regular",
-      title: "млрд.",
+      title: "млрд. руб.",
       axisAlpha: 1,
       gridAlpha: 0
     }
@@ -273,6 +273,7 @@ var chart = AmCharts.makeChart("chartdiv1", {
   valueAxes: [
     {
       stackType: "regular",
+      autoGridCount: "true",
       axisAlpha: 1,
       gridAlpha: 0,
       title: "тонны золота"
